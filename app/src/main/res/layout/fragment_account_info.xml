@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="account"
+            type="com.example.demojetpack.data.Account"/>
+        <variable
+            name="viewModel"
+            type="com.example.demojetpack.view.info.AccountInfoViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/textView_accountInfo_accountInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/textSize_all_header_48dp"
+            android:text="@string/accountInfo_accountInfo"
+            android:layout_margin="@dimen/margin_all_textInput_16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textView_accountInfo_account"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <TextView
+            android:id="@+id/textView_accountInfo_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text = "@string/accountInfo_accountDemo"
+            android:text="@{@string/accountInfo_account(account.id)}"
+            android:layout_margin="@dimen/margin_all_textInput_16dp"
+            app:layout_constraintTop_toBottomOf="@id/textView_accountInfo_accountInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textView_accountInfo_name"/>
+        <TextView
+            android:id="@+id/textView_accountInfo_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text = "@string/accountInfo_nameDemo"
+            android:text="@{@string/accountInfo_name(account.name)}"
+            android:layout_margin="@dimen/margin_all_textInput_16dp"
+            app:layout_constraintTop_toBottomOf="@id/textView_accountInfo_account"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textView_accountInfo_phone"/>
+        <TextView
+            android:id="@+id/textView_accountInfo_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text = "@string/accountInfo_phoneDemo"
+            android:text="@{@string/accountInfo_phone(account.phone)}"
+            android:layout_margin="@dimen/margin_all_textInput_16dp"
+            app:layout_constraintTop_toBottomOf="@id/textView_accountInfo_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/button_accountInfo_logout"/>
+        <Button
+            android:id="@+id/button_accountInfo_logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accountInfo_logOut"
+            android:layout_margin="@dimen/margin_all_textInput_16dp"
+            app:layout_constraintTop_toBottomOf="@id/textView_accountInfo_phone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

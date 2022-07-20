@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_all_textInput_16dp">16dp</dimen>
+    <dimen name="textSize_all_header_48dp">48dp</dimen>
+</resources>

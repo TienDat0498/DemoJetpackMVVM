@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">DemoJetpack</string>
+    <string name="all_account">Account</string>
+    <string name="all_password">Password</string>
+    <string name="all_name">Name</string>
+    <string name="all_phone">Phone Number</string>
+    <string name="login_login">Log In</string>
+    <string name="login_doNotHaveAccount"><u>Don\'t have an account? Create one</u></string>\
+
+    <string name="register_register">Register</string>
+
+
+    <string name="accountInfo_accountInfo">Account info</string>
+    <string name="accountInfo_accountDemo"><b>Account: </b>datkieu</string>
+    <string name="accountInfo_nameDemo"><b>Name: </b>Kieu Tien Dat</string>
+    <string name="accountInfo_phoneDemo"><b>Phone: </b>0123456789</string>
+    <string name="accountInfo_account"><b>Account: </b>%s</string>
+    <string name="accountInfo_name"><b>Name: </b>%s</string>
+    <string name="accountInfo_phone"><b>Phone: </b>%s</string>
+    <string name="accountInfo_logOut">Log out</string>
+</resources>
